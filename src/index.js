@@ -1,16 +1,19 @@
-/*
-* @Author: dingyiming
-* @Date:   2016-04-07 15:28:02
-* @Last Modified by:   dingyiming
-* @Last Modified time: 2016-04-07 15:36:20
-*/
-
-'use strict';
-
+import 'babel-polyfill'
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router } from 'react-router';
+import { Provider } from 'react-redux'
+import App from './containers/App'
+import routes from './routes';
+import { createStore } from 'redux'
+import configureStore from './store/configureStore'
+import 'todomvc-app-css/index.css'
+
+const store = configureStore()
 
 ReactDOM.render(
-	<h1>这是分支测试</h1>,
+	<Provider store={store}>
+			<App />
+	</Provider>,
 	document.getElementById('root')
 	);
