@@ -11,6 +11,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(
-	<h1>我是index.js</h1>,
+	<h1>这是分支测试</h1>,
 	document.getElementById('root')
 	);
